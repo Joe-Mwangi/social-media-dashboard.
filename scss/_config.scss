@@ -1,0 +1,142 @@
+// ------------resets----------------
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Tahoma, sans-serif;
+}
+body::-webkit-scrollbar{
+    width: 8px;
+    background: #dadada;
+}
+body::-webkit-scrollbar-thumb{
+    background: #1e90ff;
+    border-radius: 50px;
+}
+// -------functions----------
+
+@mixin theme($light-theme: true){
+    @if $light-theme {
+       background: lighten($Bg-color, 98%);
+       color: darken($light-theme-header-color, 98%);
+    }
+}
+// @mixin grid-theme($light-grid: true){
+//     @if $light-grid {
+//        background-color: lighten($Dark-grid-bg, 75%);
+//     }
+// }
+// @function header-color($color){
+//     @if(lightness($color)>40%){
+//         @return $dark-theme-header-color;
+//     }
+//     @else {
+//         @return $light-theme-header-color;
+//     }
+// }
+// @function  Card-bg($color){
+//     @if(lightness($color)<40%){
+//         @return $Dark-grid-bg;
+//     }
+//     @else {
+//         @return $light-theme-card-bg;
+//     }
+// }
+@function text-color($color){
+    @if(lightness($color)>40%){
+        @return $dark-theme-text;
+    }
+    @else {
+        @return $light-theme-text;
+    }
+}
+@function hover-color($color){
+    @if(lightness($color)<40%){
+        @return $Dark-theme-hover-Bg;
+    }
+    @else {
+        @return $light-theme-hover-bg;
+    }
+}
+@function weight($weight-name){
+    @return map-get($font-weights, $weight-name);
+}
+
+// ---------------mixins---------------
+
+@mixin color($color) {
+    .gains{
+        p{
+            color: $color;
+        }
+    }
+}
+@mixin small {
+    @media screen and (max-width: 280px) {
+        @content;
+    }
+}
+@mixin medium {
+    @media screen and (min-width: 600px) {
+        @content;
+    }
+}
+@mixin large {
+    @media screen and (min-width: 850px) {
+        @content;
+    }
+}
+@mixin x-large {
+    @media screen and (min-width: 1400px) {
+        @content;
+    }
+}
+
+// --------------variables---------------------
+
+$Lime-Green: hsl(163, 72%, 41%);
+$Bright-Red: hsl(356, 69%, 56%);
+
+$Facebook: hsl(208, 92%, 53%);
+$Twitter: hsl(203, 89%, 53%);
+$Instagram: linear-gradient(90deg, hsl(37, 97%, 70%) ,hsl(329, 70%, 58%));
+// $Instagram: orange;
+$YouTube: hsl(348, 97%, 39%);
+
+// #### Dark Theme
+
+$Toggle: linear-gradient(90deg, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+
+// #### Light Theme
+
+$Toggle-light: hsl(230, 22%, 74%);
+
+
+// #### Dark Theme
+
+$Bg-color: hsl(230, 17%, 14%);
+$header-Bg: hsl(232, 19%, 15%);
+$Dark-theme-hover-Bg: hsl(233, 19%, 25%);
+$Dark-grid-bg : hsl(228, 28%, 20%);
+$dark-theme-text: hsl(228, 34%, 66%);
+$dark-theme-header-color : hsl(230, 17%, 14%);
+
+
+// #### Light Theme
+
+$Bg-color-light: hsl(0, 0%, 100%);
+$light-theme-hover-bg : hsl(0, 0%, 90%);
+$light-theme-card-bg: hsl(227, 47%, 96%);
+$light-theme-text : hsl(228, 12%, 44%);
+$light-theme-header-color : hsl(0, 0%, 100%);
+// ### Body Copy
+
+// $Font size (Overview Card Headings): 14px
+
+// ### Font
+
+// $Family: [Inter](https://fonts.google.com/specimen/Inter)
+$font-weights:(
+    'regular': 400,
+    'bold': 700
+);
