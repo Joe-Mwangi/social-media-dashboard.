@@ -1,0 +1,312 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Tahoma, sans-serif;
+}
+
+body::-webkit-scrollbar {
+  width: 8px;
+  background: #dadada;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #1e90ff;
+  border-radius: 50px;
+}
+
+@media screen and (max-width: 280px) {
+  h1 {
+    font-size: 32px;
+  }
+  .grid-container1 {
+    margin-top: -1.5rem;
+  }
+}
+@media screen and (min-width: 600px) {
+  .container {
+    display: flex;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 850px) {
+  .container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  h1 {
+    font-size: 40px;
+  }
+  .header {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 2rem;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .header .btn {
+    gap: 0.5rem;
+  }
+  .grid-container1 {
+    display: grid;
+    grid-template-columns: repeat(4, 12rem);
+  }
+  .grid1 {
+    grid-column: 1/2;
+  }
+  .section2 {
+    padding: 0 1rem;
+  }
+  .section2 h2 {
+    font-size: 20px;
+    margin: 1rem 0;
+  }
+  .section2 .grid-container2 {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .section2 .grid1 {
+    grid-row: 1/2;
+    grid-column: 1/2;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  h1 {
+    font-size: 50px;
+  }
+  p, h4 {
+    font-size: 16px;
+  }
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  header .btn {
+    gap: 0.5rem;
+  }
+  .grid-container1 {
+    grid-template-columns: repeat(4, 15rem);
+  }
+  .section2 h2 {
+    font-size: 24px;
+  }
+  .section2 .grid-container2 {
+    grid-template-columns: repeat(4, 15rem);
+  }
+}
+.container {
+  width: 100%;
+  background: hsl(230deg, 17%, 14%);
+  color: hsl(0deg, 0%, 100%);
+  padding-bottom: 1rem;
+}
+
+.theme {
+  background: white;
+  color: #050505;
+}
+
+h1 {
+  font-size: 36px;
+}
+
+h1, h2, h3 {
+  font-weight: 700;
+}
+
+p, h4 {
+  font-size: 14px;
+  font-weight: 400;
+  color: hsl(228deg, 12%, 44%);
+}
+
+h4 {
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  padding: 0 1rem;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+header .heading {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+header .heading h2 {
+  font-size: 20px;
+}
+header .btn {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+header .btn .btn-container {
+  height: 1rem;
+  width: 2rem;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0.12rem;
+  background: linear-gradient(90deg, hsl(210deg, 78%, 56%), hsl(146deg, 68%, 55%));
+  transition: all 0.3s linear;
+}
+header .btn .btn-container .button {
+  height: 0.88rem;
+  width: 0.88rem;
+  border-radius: 50%;
+  background-color: hsl(230deg, 17%, 14%);
+}
+header .btn .active {
+  justify-content: flex-end;
+  background: hsl(230deg, 22%, 74%);
+}
+header .btn .active .button {
+  background-color: #fff;
+}
+
+.grid-container1 {
+  display: grid;
+  grid-template-columns: minmax(1fr);
+  gap: 1rem;
+  padding: 0 1rem;
+}
+.grid-container1 .grid1 {
+  grid-column: 1/2;
+  border-top: 5px solid hsl(208deg, 92%, 53%);
+  padding: 0.8rem 0;
+}
+.grid-container1 .grid1 .gains p {
+  color: hsl(163deg, 72%, 41%);
+}
+.grid-container1 .grid2 {
+  border-top: 5px solid hsl(203deg, 89%, 53%);
+  padding: 0.8rem 0;
+}
+.grid-container1 .grid2 .gains p {
+  color: hsl(163deg, 72%, 41%);
+}
+.grid-container1 .grid3 {
+  overflow: hidden;
+  padding-bottom: 0.8rem;
+}
+.grid-container1 .grid3 span {
+  height: 5px;
+  width: 100%;
+  background: linear-gradient(90deg, hsl(37deg, 97%, 70%), hsl(329deg, 70%, 58%));
+  margin-bottom: 0.4rem;
+}
+.grid-container1 .grid3 .gains p {
+  color: hsl(163deg, 72%, 41%);
+}
+.grid-container1 .grid4 {
+  border-top: 5px solid hsl(348deg, 97%, 39%);
+  padding: 0.8rem 0;
+}
+.grid-container1 .grid4 .gains p {
+  color: hsl(356deg, 69%, 56%);
+}
+.grid-container1 .grid:hover {
+  background-color: hsl(233deg, 19%, 25%);
+}
+.grid-container1 .grid {
+  background-color: hsl(228deg, 28%, 20%);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+  border-radius: 5px;
+  transition: all 0.3s linear;
+}
+.grid-container1 .grid .icon {
+  display: flex;
+  gap: 0.5rem;
+}
+.grid-container1 .grid .gains {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+}
+.grid-container1 .grid .gains img {
+  height: 3px;
+}
+.grid-container1 .bg {
+  background-color: hsl(227deg, 47%, 96%);
+}
+.grid-container1 .bg:hover {
+  background-color: hsl(0deg, 0%, 90%);
+}
+
+.section2 {
+  padding: 0 1rem;
+}
+.section2 h2 {
+  font-size: 20px;
+  margin: 1rem 0;
+}
+.section2 .text-color {
+  color: hsl(228deg, 12%, 44%);
+}
+.section2 .grid-container2 {
+  display: grid;
+  grid-template-rows: minmax(1fr);
+  gap: 0.8rem 1rem;
+}
+.section2 .grid-container2 .grid1 {
+  grid-row: 1/2;
+}
+.section2 .grid-container2 .grid1 .gains p, .section2 .grid-container2 .grid3 .gains p, .section2 .grid-container2 .grid4 .gains p, .section2 .grid-container2 .grid5 .gains p, .section2 .grid-container2 .grid6 .gains p {
+  color: hsl(163deg, 72%, 41%);
+}
+.section2 .grid-container2 .grid2 .gains p, .section2 .grid-container2 .grid7 .gains p, .section2 .grid-container2 .grid8 .gains p {
+  color: hsl(356deg, 69%, 56%);
+}
+.section2 .grid-container2 .grid {
+  background-color: hsl(228deg, 28%, 20%);
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 1rem;
+  transition: all 0.3s linear;
+}
+.section2 .grid-container2 .grid .icon {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+.section2 .grid-container2 .grid .followers {
+  display: flex;
+  justify-content: space-between;
+}
+.section2 .grid-container2 .grid .followers .gains {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+}
+.section2 .grid-container2 .grid .followers .gains img {
+  height: 3px;
+}
+.section2 .grid-container2 .grid:hover {
+  background-color: hsl(233deg, 19%, 25%);
+}
+.section2 .grid-container2 .bg {
+  background-color: hsl(227deg, 47%, 96%);
+}
+.section2 .grid-container2 .bg:hover {
+  background-color: hsl(0deg, 0%, 90%);
+}/*# sourceMappingURL=main.css.map */
